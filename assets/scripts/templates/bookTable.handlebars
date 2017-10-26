@@ -1,0 +1,17 @@
+{{#if books}}
+<table class="table-responsive table-hover table-striped table-border">
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Author</td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each books as |book|}}
+      {{> bookRow}}
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="alert alert-danger">No books found!</div>
+{{/if}}
